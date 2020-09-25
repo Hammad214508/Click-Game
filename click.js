@@ -35,6 +35,7 @@ $(document).ready(function(){
 
         $("#intern_hire").on('click', function(){
             intern_hired += 1;
+            $("#intern_hired").html(intern_hired);
             clicks_per_second += 0.5;
             total_clicks -= intern_cost;
             $("#click_count").html(Math.round(total_clicks));
@@ -45,6 +46,7 @@ $(document).ready(function(){
 
         $("#engineer_hire").on('click', function(){
             engineer_cost += 1;
+            $("#engineer_hired").html(engineer_hired);
             clicks_per_second += 1;
             total_clicks -= engineer_cost;
             $("#click_count").html(Math.round(total_clicks));
@@ -56,6 +58,7 @@ $(document).ready(function(){
 
         $("#senior_hire").on('click', function(){
             senior_hired += 1;
+            $("#senior_hired").html(senior_hired);
             clicks_per_second += 2;
             total_clicks -= senior_cost;
             $("#click_count").html(Math.round(total_clicks));
