@@ -1,4 +1,4 @@
-# Click-Game
+# Hiring Game
 
 Simple game in which you are a Hiring manager and you can hire:
 
