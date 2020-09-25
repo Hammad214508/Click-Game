@@ -14,15 +14,13 @@ $(document).ready(function(){
     var engineer_cost = 100;
     var senior_cost = 200;
 
-
-
     $.fn.button_click_event = function(){
         $("#click_btn").on('click', function(){
             total_clicks += 1;
             $("#click_count").html(Math.floor(total_clicks));
         });
     };
-    
+
     $.fn.clicks_per_second_event = function(){
         window.setInterval(function(){
             total_clicks += clicks_per_second;
@@ -86,10 +84,6 @@ $(document).ready(function(){
             }
         });
     }
-
-
-
-
 
     var pageready = (function(){
         var thispage = {};
