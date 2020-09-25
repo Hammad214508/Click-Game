@@ -45,7 +45,7 @@ $(document).ready(function(){
         });
 
         $("#engineer_hire").on('click', function(){
-            engineer_cost += 1;
+            engineer_hired += 1;
             $("#engineer_hired").html(engineer_hired);
             clicks_per_second += 1;
             total_clicks -= engineer_cost;
