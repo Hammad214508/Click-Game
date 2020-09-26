@@ -20,6 +20,39 @@
             <div class="row">
 
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8 mt-5 border_right">
+
+                    <div class="row">
+
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+
+                            <div class="container text-center">
+                                <button id="normal_btn" type="button" class="btn btn-lg btn-primary active">Normal</button>
+                                <button id="timer_btn" type="button" class="btn btn-lg btn-primary">Timer</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10 mb-5 mt-4">
+
+                            <div id="timer" class="container text-center" style="display:none;">
+                                <h3 id="countdown">02:00:00</h3>
+                                <form id="timerform">
+                                    <input id="start" type='button' onclick='ClickTimer.Timer.toggle();' style="display:none"/>
+                                    <div id="time_inp">
+                                        <input id="seconds" type='text' name='startTime' value='120' style='width:5em;'> Seconds
+                                    </div>
+                                    <input id="set" type='button' class="btn btn-primary mt-2" value="Set Timer" onclick='ClickTimer.resetCountdown();'/>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+
                     <div class="row text-center">
                         <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-5 mb-3">
                             <p>TOTAL CLICKS</p>
@@ -40,6 +73,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <span id="overall_score" style="display:none"/>
 
                 </div>
 
@@ -88,6 +123,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="jquery.timer.js"></script>
+    <script type="text/javascript" src="my_timer.js"></script>
     <script src="click.js"></script>
 
 </html>

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var overall_score = 0;
     var total_clicks = 0;
     var clicks_per_second = 0;
 
@@ -17,14 +18,18 @@ $(document).ready(function(){
     $.fn.button_click_event = function(){
         $("#click_btn").on('click', function(){
             total_clicks += 1;
+            overall_score += 1;
             $("#click_count").html(Math.floor(total_clicks));
+            $("#overall_score").html(Math.floor(overall_score));
         });
     };
 
     $.fn.clicks_per_second_event = function(){
         window.setInterval(function(){
             total_clicks += clicks_per_second;
+            overall_score += clicks_per_second;
             $("#click_count").html(Math.floor(total_clicks));
+            $("#overall_score").html(Math.floor(overall_score));
         }, 1000);
     }
 
@@ -92,10 +97,33 @@ $(document).ready(function(){
         var thispage = {};
         thispage.init = function(){
 
-        $.fn.button_click_event();
-        $.fn.clicks_per_second_event();
-        $.fn.hiring_button_events();
-        $.fn.hiring_enabling_even();
+            $("#timer_btn").on('click', function(){
+                $("#timer").show();
+                $("#set").trigger('click');
+                $("#normal_btn").removeClass("active")
+                $(this).addClass("active")
+            })
+
+            $("#normal_btn").on('click', function(){
+                $("#timer").hide();
+                $("#timer_btn").removeClass("active")
+                $(this).addClass("active")
+            })
+
+            $("#seconds").on("change", function(){
+                $("#set").trigger('click');
+            })
+
+            $("#click_btn").one('click', function(){
+                $("#start").trigger('click');
+                $("#time_inp").hide();
+            })
+
+
+            $.fn.button_click_event();
+            $.fn.clicks_per_second_event();
+            $.fn.hiring_button_events();
+            $.fn.hiring_enabling_even();
 
         };
         return thispage;
